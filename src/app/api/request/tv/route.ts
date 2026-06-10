@@ -14,12 +14,12 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           title: body.title,
-          qualityProfileId: 1,
+          qualityProfileId: 4,
           titleSlug: body.title.toLowerCase().replace(/\s+/g, "-"),
           images: [],
           tvdbId: body.tvdbId,
           year: body.year,
-          rootFolderPath: "/data/media/tv",
+          rootFolderPath: "/tv",
           monitored: true,
           addOptions: {
             searchForMissingEpisodes: true,

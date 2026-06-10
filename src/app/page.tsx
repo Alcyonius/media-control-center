@@ -8,7 +8,7 @@ import {
   getSonarrHealth,
 } from "@/lib/api";
 
-export const revalidate = 5;
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
 
@@ -29,6 +29,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-[#0b0f19] text-white p-8">
 
+      
       {/* HEADER */}
       <SearchBar />
       <Header

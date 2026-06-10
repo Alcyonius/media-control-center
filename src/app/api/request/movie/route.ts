@@ -14,12 +14,12 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           title: body.title,
-          qualityProfileId: 1,
+          qualityProfileId: 5,
           titleSlug: body.title.toLowerCase().replace(/\s+/g, "-"),
           images: [],
           tmdbId: body.tmdbId,
           year: body.year,
-          rootFolderPath: "/data/media/movies",
+          rootFolderPath: "/movies",
           monitored: true,
           addOptions: {
             searchForMovie: true,
