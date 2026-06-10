@@ -1,13 +1,16 @@
-import type { CapacitorConfig } from '@capacitor/cli';
-
 const config: CapacitorConfig = {
   appId: 'uk.homelab.mcc',
   appName: 'Media Control Center',
   webDir: '.next',
+
   server: {
     url: 'https://media.homelab-server.uk',
-    cleartext: false
-  }
-};
+    cleartext: true
+  },
 
-export default config;
+  android: {
+    scheme: 'mcc'
+  }
+}
+
+export default config
