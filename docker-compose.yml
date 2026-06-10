@@ -11,3 +11,13 @@ services:
       - "host.docker.internal:host-gateway"
 
     restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: media-cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    volumes:
+      - ./cloudflared:/etc/cloudflared
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

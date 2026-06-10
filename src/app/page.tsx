@@ -1,4 +1,5 @@
 import Header from "@/components/dashboard/Header";
+import SearchBar from "@/components/search/SearchBar";
 
 import {
   getSabQueue,
@@ -29,6 +30,7 @@ export default async function Home() {
     <main className="min-h-screen bg-[#0b0f19] text-white p-8">
 
       {/* HEADER */}
+      <SearchBar />
       <Header
   title="Media Control Center"
   subtitle="Unified media dashboard"

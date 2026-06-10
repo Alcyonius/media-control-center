@@ -1,12 +1,12 @@
 {
   "name": "Media Control Center",
   "short_name": "MCC",
-  "description": "Unified media dashboard",
+  "description": "Unified media ecosystem controller",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0f19",
   "theme_color": "#0b0f19",
-  "orientation": "landscape",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/icon-192.png",
