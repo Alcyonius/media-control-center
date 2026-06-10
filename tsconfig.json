@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "esnext"], 
     "allowJs": true,
+    "typedRoutes"; false,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
