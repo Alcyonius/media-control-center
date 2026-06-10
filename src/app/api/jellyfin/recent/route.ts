@@ -1,20 +1,16 @@
 import { NextResponse } from "next/server";
-import { config } from "@/lib/config";
 
 export async function GET() {
   try {
     const response = await fetch(
-      `${config.jellyfin.url}/Users/${process.env.JELLYFIN_USER_ID}/Items/Latest?Limit=5`,
+      `${process.env.JELLYFIN_URL}/Users/${process.env.JELLYFIN_USER_ID}/Items/Latest?Limit=12`,
       {
         headers: {
-          "X-Emby-Token": config.jellyfin.apiKey,
+          "X-Emby-Token": process.env.JELLYFIN_API_KEY || "",
         },
+        cache: "no-store",
       }
     );
-
-    if (!response.ok) {
-      throw new Error(`Jellyfin API error: ${response.status}`);
-    }
 
     const data = await response.json();
 
@@ -23,7 +19,7 @@ export async function GET() {
     console.error(error);
 
     return NextResponse.json(
-      { error: "Failed to fetch Jellyfin" },
+      { error: "Failed to fetch Jellyfin data" },
       { status: 500 }
     );
   }
