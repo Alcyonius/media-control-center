@@ -1,7 +1,7 @@
 services:
-  media-control-center:
+  mcc:
     build: .
-    container_name: media-control-center
+    container_name: mcc
 
     ports:
       - "3002:3000"
