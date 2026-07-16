@@ -1,29 +1,50 @@
-export default function HomePage() {
+import MainLayout from "@/components/layout/MainLayout";
+import DashboardCard from "@/components/dashboard/DashboardCard";
+
+export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white flex items-center justify-center">
-      <div className="text-center space-y-4">
+    <MainLayout>
+      <div className="space-y-8">
 
-        <h1 className="text-6xl font-bold">
-          Media Control Center
-        </h1>
+        <div>
+          <h1 className="text-4xl font-bold">
+            Dashboard
+          </h1>
 
-        <p className="text-zinc-400 text-xl">
-          HomeLabV2
-        </p>
-
-        <div className="mt-10 rounded-xl border border-green-500/30 bg-green-500/10 p-6">
-
-          <h2 className="text-2xl font-semibold text-green-400">
-            🚀 MCC v2
-          </h2>
-
-          <p className="mt-2 text-zinc-300">
-            Successfully running inside Docker.
+          <p className="text-zinc-400">
+            Welcome back to your homelab.
           </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+          <DashboardCard
+            title="CPU Usage"
+            value="12%"
+            subtitle="Normal"
+          />
+
+          <DashboardCard
+            title="Memory"
+            value="31%"
+            subtitle="12 GB / 32 GB"
+          />
+
+          <DashboardCard
+            title="Storage"
+            value="17%"
+            subtitle="2.6 TB Free"
+          />
+
+          <DashboardCard
+            title="Containers"
+            value="14"
+            subtitle="All running"
+          />
 
         </div>
 
       </div>
-    </main>
-  )
+    </MainLayout>
+  );
 }
